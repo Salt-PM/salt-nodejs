@@ -138,7 +138,7 @@ function getInsecureConnections() {
     let saltConfigFile = `${getSaltConfigDir()}Settings.json`;
 
     if (!pathExistsSync(`${getSaltConfigDir()}Settings.json`)) {
-        console.error("Settings file not found");
+        setInsecureConnections(false);
     }
     let saltConfigFileData = jsonc.parse(
         readFileSync(saltConfigFile).toString()
@@ -168,7 +168,7 @@ function getExtensionsEnabled() {
     let saltConfigFile = `${getSaltConfigDir()}Settings.json`;
 
     if (!pathExistsSync(`${getSaltConfigDir()}Settings.json`)) {
-        console.error("Settings file not found");
+        setExtensionsEnabled(!isBrowser);
     }
     let saltConfigFileData = jsonc.parse(
         readFileSync(saltConfigFile).toString()

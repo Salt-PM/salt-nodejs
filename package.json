@@ -1,6 +1,6 @@
 {
     "name": "salt-nodejs",
-    "version": "1.1.0-rc.3",
+    "version": "1.1.0-rc.4",
     "description": "A modern way to easily download files.",
     "type": "module",
     "main": "salt.js",
@@ -25,17 +25,17 @@
         "prettier": "^2.7.1"
     },
     "dependencies": {
-        "basic-ftp": "^5.0.1",
+        "basic-ftp": "^5.0.2",
         "browser-or-node": "^2.0.0",
         "commander": "^9.4.0",
         "glob": "^8.0.3",
-        "got": "^12.3.1",
+        "got": "^12.4.1",
         "jsonc": "^2.0.0",
         "lunr": "^2.3.9",
         "sftp-promises": "^1.8.0",
         "tar": "^6.1.11",
-        "uuid": "^8.3.2",
-        "vm2": "^3.9.10"
+        "uuid": "^9.0.0",
+        "vm2": "^3.9.11"
     },
     "bin": {
         "salt": "./cli.js"

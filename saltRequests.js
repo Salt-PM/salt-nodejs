@@ -67,7 +67,7 @@ class Request extends PassThrough {
 
         //Make sure url is of URL type
         requestURL = requestURL.toString();
-        requestURL = new URL(requestURL.replace("$SALT_UUID", getDeviceUUID()));
+        requestURL = new URL(requestURL.replace("^SALT_UUID", getDeviceUUID()));
         switch (requestURL.protocol) {
             // HTTP
             case "http:":

@@ -1,110 +1,42 @@
 # Salt Node.js Library and CLI
 
-This is both a CLI and library. It can be run with `npx salt-js <verb>`
+This is both a CLI and library. The cli can be run with `npx salt-js`
 
-## Verbs
+## Usage
 
-### download &lt;id&gt;
+### CLI
 
-Get specified game from your repos.
+```txt
+Usage: npx salt-nodejs [options] [command]
 
-#### Aliases
+Get specified file from your repos.
 
-- d &lt;id&gt;
+Options:
+  -V, --version                                          output the version number
+  -h, --help                                             display help for command
 
-### list 
-
-List all files from repos.
-
-#### Aliases
-
-- l
-
-### listr &lt;Repository id&gt;
-
-List all files from a specified repository.
-
-#### Aliases
-
-- lr &lt;Repository id&gt;
-
-### search &lt;platform&gt; &lt;search terms&gt;
-
-Search games for platform from repos.
-
-#### Aliases
-
-- s &lt;platform&gt; &lt;search terms&gt;
-
-### update
-
-Update cache 
-
-#### Aliases
-
-- u
-
-## repo list
-
-List all repositories.
-
-#### Aliases
-
-- re l
-
-### repo add &lt;name&gt; &lt;url&gt; &lt;type&gt;
-
-Add repository from a url.
-
-#### Aliases
-
-- re a &lt;name&gt; &lt;url&gt; &lt;type&gt;
-
-### repo remove &lt;Repository id&gt;
-
-Remove the specified repository.
-
-#### Aliases
-
-- re r &lt;Repository id&gt;
-
-### extension list
-
-List all extensions.
-
-#### Aliases
-
-- e l
-
-### extension install &lt;.saltextension path&gt;
-
-Install extension from path.
-
-#### Aliases
-
-- e i &lt;.saltextension path&gt;
-
-### config
-
-Open settings configurator
-
-#### Aliases
-
-- c
-
-<!--### config outputDir &lt;path&gt;
-
-Set output directory
-
-### config setUnsecuredOpt &lt;true or false&gt;
-
-Disable or enable insecure connections i.e. torrents, http, ftp-->
+Commands:
+  download|dl [options] <File ID>                        Download a file.
+  list|ls                                                List all files in your repos.
+  list-repo|list-repository <Repo ID>                    List all files in a repo.
+  search|s <Search Query...>                             Search for files in your repos.
+  update|u                                               Update the cache of your repos.
+  repo-list|repo                                         List all repos.
+  repo-add|repoadd <Repo URL>                            Add a repo to your list of repos.
+  repo-remove|reporemove <Repo ID>                       Remove a repo from your list of repos.
+  extension-list|extension                               List all installed extensions.
+  extension-install|extensioninstall <Extension File>    Install an extension.
+  extension-uninstall|extensionuninstall <Extension ID>  Uninstall an extension.
+  config|conf <Config Property> [Config Value]           View or set properties in the config.
+  get-uuid|uuid                                          Get the UUID of the current machine.
+  help [command]                                         display help for command
+```
 
 ## License
 
 MIT License
 
-Copyright (c) 2021 meponder
+Copyright (c) 2021-2022 meponder
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

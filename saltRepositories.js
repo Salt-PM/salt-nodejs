@@ -123,7 +123,7 @@ async function getRepoList() {
             ).toString()
         );
     } else {
-        throw new Error("No repositories file found");
+        return {};
     }
 }
 
@@ -152,8 +152,12 @@ async function getListOfItems() {
                 }
             }
         } catch (error) {
-            throw new RepositoryError(
+            /*throw new RepositoryError(
                 `Failed to fetch repository: ${RepositoryURL}`
+            );*/
+            // Tempory solution to not break the whole thing if a repo is down
+            console.log(
+                `Failed to fetch repository: ${RepositoryURL} - ${error}`
             );
         }
     }

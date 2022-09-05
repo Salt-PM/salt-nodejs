@@ -34,7 +34,6 @@ async function pathExists(path) {
         await promises.lstat(path);
         return true;
     } catch (e) {
-        console.log(e);
         return false;
     }
 }
